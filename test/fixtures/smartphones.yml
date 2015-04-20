@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: MyText
+  model: MyText
+  carrier: MyText
+  phoneNumber: MyText
+  serialNumber: MyText
+  meid: MyText
+  macAddress: MyText
+  department: MyText
+  location: MyText
+  assignedTo: MyText
+  status: MyText
+  notes: MyText
+
+two:
+  manufacturer: MyText
+  model: MyText
+  carrier: MyText
+  phoneNumber: MyText
+  serialNumber: MyText
+  meid: MyText
+  macAddress: MyText
+  department: MyText
+  location: MyText
+  assignedTo: MyText
+  status: MyText
+  notes: MyText

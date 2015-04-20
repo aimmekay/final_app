@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @smartphone.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @smartphone.model %>
+</p>
+
+<p>
+  <strong>Carrier:</strong>
+  <%= @smartphone.carrier %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @smartphone.phoneNumber %>
+</p>
+
+<p>
+  <strong>Serialnumber:</strong>
+  <%= @smartphone.serialNumber %>
+</p>
+
+<p>
+  <strong>Meid:</strong>
+  <%= @smartphone.meid %>
+</p>
+
+<p>
+  <strong>Macaddress:</strong>
+  <%= @smartphone.macAddress %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @smartphone.department %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @smartphone.location %>
+</p>
+
+<p>
+  <strong>Assignedto:</strong>
+  <%= @smartphone.assignedTo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @smartphone.status %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @smartphone.notes %>
+</p>
+
+<%= link_to 'Edit', edit_smartphone_path(@smartphone) %> |
+<%= link_to 'Back', smartphones_path %>

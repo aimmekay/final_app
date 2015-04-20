@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @laptop.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @laptop.model %>
+</p>
+
+<p>
+  <strong>Jslgtag:</strong>
+  <%= @laptop.jslgTag %>
+</p>
+
+<p>
+  <strong>Manufacturertag:</strong>
+  <%= @laptop.manufacturerTag %>
+</p>
+
+<p>
+  <strong>Serialnumber:</strong>
+  <%= @laptop.serialNumber %>
+</p>
+
+<p>
+  <strong>Ostype:</strong>
+  <%= @laptop.osType %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @laptop.hostName %>
+</p>
+
+<p>
+  <strong>Ram:</strong>
+  <%= @laptop.ram %>
+</p>
+
+<p>
+  <strong>Hdd:</strong>
+  <%= @laptop.hdd %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @laptop.department %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @laptop.location %>
+</p>
+
+<p>
+  <strong>Assignedto:</strong>
+  <%= @laptop.assignedTo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @laptop.status %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @laptop.notes %>
+</p>
+
+<%= link_to 'Edit', edit_laptop_path(@laptop) %> |
+<%= link_to 'Back', laptops_path %>

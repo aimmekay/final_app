@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @deskphone.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @deskphone.model %>
+</p>
+
+<p>
+  <strong>Serialnumber:</strong>
+  <%= @deskphone.serialNumber %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @deskphone.phoneNumber %>
+</p>
+
+<p>
+  <strong>Macaddress:</strong>
+  <%= @deskphone.macAddress %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @deskphone.department %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @deskphone.location %>
+</p>
+
+<p>
+  <strong>Assignedto:</strong>
+  <%= @deskphone.assignedTo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @deskphone.status %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @deskphone.notes %>
+</p>
+
+<%= link_to 'Edit', edit_deskphone_path(@deskphone) %> |
+<%= link_to 'Back', deskphones_path %>

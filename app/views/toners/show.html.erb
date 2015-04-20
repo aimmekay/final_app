@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @toner.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @toner.model %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @toner.color %>
+</p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @toner.id %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @toner.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_toner_path(@toner) %> |
+<%= link_to 'Back', toners_path %>

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @dtu.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @dtu.model %>
+</p>
+
+<p>
+  <strong>Serialnumber:</strong>
+  <%= @dtu.serialNumber %>
+</p>
+
+<p>
+  <strong>Jslgtag:</strong>
+  <%= @dtu.jslgTag %>
+</p>
+
+<p>
+  <strong>Macaddress:</strong>
+  <%= @dtu.macAddress %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @dtu.hostName %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @dtu.department %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @dtu.location %>
+</p>
+
+<p>
+  <strong>Assignedto:</strong>
+  <%= @dtu.assignedTo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @dtu.status %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @dtu.notes %>
+</p>
+
+<%= link_to 'Edit', edit_dtu_path(@dtu) %> |
+<%= link_to 'Back', dtus_path %>

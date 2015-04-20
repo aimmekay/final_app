@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dtus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Serialnumber</th>
+      <th>Jslgtag</th>
+      <th>Macaddress</th>
+      <th>Hostname</th>
+      <th>Department</th>
+      <th>Location</th>
+      <th>Assignedto</th>
+      <th>Status</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dtus.each do |dtu| %>
+      <tr>
+        <td><%= dtu.manufacturer %></td>
+        <td><%= dtu.model %></td>
+        <td><%= dtu.serialNumber %></td>
+        <td><%= dtu.jslgTag %></td>
+        <td><%= dtu.macAddress %></td>
+        <td><%= dtu.hostName %></td>
+        <td><%= dtu.department %></td>
+        <td><%= dtu.location %></td>
+        <td><%= dtu.assignedTo %></td>
+        <td><%= dtu.status %></td>
+        <td><%= dtu.notes %></td>
+        <td><%= link_to 'Show', dtu %></td>
+        <td><%= link_to 'Edit', edit_dtu_path(dtu) %></td>
+        <td><%= link_to 'Destroy', dtu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dtu', new_dtu_path %>

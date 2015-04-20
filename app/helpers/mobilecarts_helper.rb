@@ -1,0 +1,2 @@
+module MobilecartsHelper
+end

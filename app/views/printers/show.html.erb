@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @printer.manufacturer %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @printer.model %>
+</p>
+
+<p>
+  <strong>Mrcid:</strong>
+  <%= @printer.mrcId %>
+</p>
+
+<p>
+  <strong>Jslgtag:</strong>
+  <%= @printer.jslgTag %>
+</p>
+
+<p>
+  <strong>Serialnumber:</strong>
+  <%= @printer.serialNumber %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @printer.hostName %>
+</p>
+
+<p>
+  <strong>Ipaddress:</strong>
+  <%= @printer.ipAddress %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @printer.department %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @printer.location %>
+</p>
+
+<p>
+  <strong>Assignedto:</strong>
+  <%= @printer.assignedTo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @printer.status %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @printer.notes %>
+</p>
+
+<%= link_to 'Edit', edit_printer_path(@printer) %> |
+<%= link_to 'Back', printers_path %>

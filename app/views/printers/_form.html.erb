@@ -1,0 +1,65 @@
+<%= form_for(@printer) do |f| %>
+  <% if @printer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@printer.errors.count, "error") %> prohibited this printer from being saved:</h2>
+
+      <ul>
+      <% @printer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_area :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_area :model %>
+  </div>
+  <div class="field">
+    <%= f.label :mrcId %><br>
+    <%= f.text_area :mrcId %>
+  </div>
+  <div class="field">
+    <%= f.label :jslgTag %><br>
+    <%= f.text_area :jslgTag %>
+  </div>
+  <div class="field">
+    <%= f.label :serialNumber %><br>
+    <%= f.text_area :serialNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :hostName %><br>
+    <%= f.text_area :hostName %>
+  </div>
+  <div class="field">
+    <%= f.label :ipAddress %><br>
+    <%= f.text_area :ipAddress %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_area :department %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
+  <div class="field">
+    <%= f.label :assignedTo %><br>
+    <%= f.text_area :assignedTo %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_area :status %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

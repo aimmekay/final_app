@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: MyText
+  model: MyText
+  jslgTag: MyText
+  manufacturerTag: MyText
+  serialNumber: MyText
+  osType: MyText
+  hostName: MyText
+  department: MyText
+  location: MyText
+  assignedTo: MyText
+  status: MyText
+  notes: MyText
+
+two:
+  manufacturer: MyText
+  model: MyText
+  jslgTag: MyText
+  manufacturerTag: MyText
+  serialNumber: MyText
+  osType: MyText
+  hostName: MyText
+  department: MyText
+  location: MyText
+  assignedTo: MyText
+  status: MyText
+  notes: MyText

@@ -1,0 +1,1 @@
+json.extract! @laptop, :id, :manufacturer, :model, :jslgTag, :manufacturerTag, :serialNumber, :osType, :hostName, :ram, :hdd, :department, :location, :assignedTo, :status, :notes, :created_at, :updated_at

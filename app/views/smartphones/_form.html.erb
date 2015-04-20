@@ -1,0 +1,65 @@
+<%= form_for(@smartphone) do |f| %>
+  <% if @smartphone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@smartphone.errors.count, "error") %> prohibited this smartphone from being saved:</h2>
+
+      <ul>
+      <% @smartphone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_area :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_area :model %>
+  </div>
+  <div class="field">
+    <%= f.label :carrier %><br>
+    <%= f.text_area :carrier %>
+  </div>
+  <div class="field">
+    <%= f.label :phoneNumber %><br>
+    <%= f.text_area :phoneNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :serialNumber %><br>
+    <%= f.text_area :serialNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :meid %><br>
+    <%= f.text_area :meid %>
+  </div>
+  <div class="field">
+    <%= f.label :macAddress %><br>
+    <%= f.text_area :macAddress %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_area :department %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
+  <div class="field">
+    <%= f.label :assignedTo %><br>
+    <%= f.text_area :assignedTo %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_area :status %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

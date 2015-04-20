@@ -1,0 +1,37 @@
+<%= form_for(@toner) do |f| %>
+  <% if @toner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@toner.errors.count, "error") %> prohibited this toner from being saved:</h2>
+
+      <ul>
+      <% @toner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_area :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_area :model %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_area :color %>
+  </div>
+  <div class="field">
+    <%= f.label :id %><br>
+    <%= f.text_area :id %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_area :quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

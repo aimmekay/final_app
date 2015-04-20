@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Deskphones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer</th>
+      <th>Model</th>
+      <th>Serialnumber</th>
+      <th>Phonenumber</th>
+      <th>Macaddress</th>
+      <th>Department</th>
+      <th>Location</th>
+      <th>Assignedto</th>
+      <th>Status</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deskphones.each do |deskphone| %>
+      <tr>
+        <td><%= deskphone.manufacturer %></td>
+        <td><%= deskphone.model %></td>
+        <td><%= deskphone.serialNumber %></td>
+        <td><%= deskphone.phoneNumber %></td>
+        <td><%= deskphone.macAddress %></td>
+        <td><%= deskphone.department %></td>
+        <td><%= deskphone.location %></td>
+        <td><%= deskphone.assignedTo %></td>
+        <td><%= deskphone.status %></td>
+        <td><%= deskphone.notes %></td>
+        <td><%= link_to 'Show', deskphone %></td>
+        <td><%= link_to 'Edit', edit_deskphone_path(deskphone) %></td>
+        <td><%= link_to 'Destroy', deskphone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deskphone', new_deskphone_path %>
