@@ -8,15 +8,9 @@
       <th>Manufacturer</th>
       <th>Model</th>
       <th>Jslgtag</th>
-      <th>Manufacturertag</th>
-      <th>Serialnumber</th>
-      <th>Ostype</th>
       <th>Hostname</th>
       <th>Department</th>
       <th>Location</th>
-      <th>Assignedto</th>
-      <th>Status</th>
-      <th>Notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,15 +21,9 @@
         <td><%= mobilecart.manufacturer %></td>
         <td><%= mobilecart.model %></td>
         <td><%= mobilecart.jslgTag %></td>
-        <td><%= mobilecart.manufacturerTag %></td>
-        <td><%= mobilecart.serialNumber %></td>
-        <td><%= mobilecart.osType %></td>
         <td><%= mobilecart.hostName %></td>
         <td><%= mobilecart.department %></td>
         <td><%= mobilecart.location %></td>
-        <td><%= mobilecart.assignedTo %></td>
-        <td><%= mobilecart.status %></td>
-        <td><%= mobilecart.notes %></td>
         <td><%= link_to 'Show', mobilecart %></td>
         <td><%= link_to 'Edit', edit_mobilecart_path(mobilecart) %></td>
         <td><%= link_to 'Destroy', mobilecart, method: :delete, data: { confirm: 'Are you sure?' } %></td>

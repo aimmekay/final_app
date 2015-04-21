@@ -9,14 +9,8 @@
       <th>Model</th>
       <th>Mrcid</th>
       <th>Jslgtag</th>
-      <th>Serialnumber</th>
-      <th>Hostname</th>
-      <th>Ipaddress</th>
       <th>Department</th>
       <th>Location</th>
-      <th>Assignedto</th>
-      <th>Status</th>
-      <th>Notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,14 +22,8 @@
         <td><%= printer.model %></td>
         <td><%= printer.mrcId %></td>
         <td><%= printer.jslgTag %></td>
-        <td><%= printer.serialNumber %></td>
-        <td><%= printer.hostName %></td>
-        <td><%= printer.ipAddress %></td>
         <td><%= printer.department %></td>
         <td><%= printer.location %></td>
-        <td><%= printer.assignedTo %></td>
-        <td><%= printer.status %></td>
-        <td><%= printer.notes %></td>
         <td><%= link_to 'Show', printer %></td>
         <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
         <td><%= link_to 'Destroy', printer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -8,17 +8,9 @@
       <th>Manufacturer</th>
       <th>Model</th>
       <th>Jslgtag</th>
-      <th>Manufacturertag</th>
-      <th>Serialnumber</th>
-      <th>Ostype</th>
-      <th>Hostname</th>
-      <th>Ram</th>
-      <th>Hdd</th>
-      <th>Department</th>
       <th>Location</th>
       <th>Assignedto</th>
       <th>Status</th>
-      <th>Notes</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,17 +21,9 @@
         <td><%= desktop.manufacturer %></td>
         <td><%= desktop.model %></td>
         <td><%= desktop.jslgTag %></td>
-        <td><%= desktop.manufacturerTag %></td>
-        <td><%= desktop.serialNumber %></td>
-        <td><%= desktop.osType %></td>
-        <td><%= desktop.hostName %></td>
-        <td><%= desktop.ram %></td>
-        <td><%= desktop.hdd %></td>
-        <td><%= desktop.department %></td>
         <td><%= desktop.location %></td>
         <td><%= desktop.assignedTo %></td>
         <td><%= desktop.status %></td>
-        <td><%= desktop.notes %></td>
         <td><%= link_to 'Show', desktop %></td>
         <td><%= link_to 'Edit', edit_desktop_path(desktop) %></td>
         <td><%= link_to 'Destroy', desktop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
