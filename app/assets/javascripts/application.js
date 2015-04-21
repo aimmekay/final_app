@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready( function() {
+	$('#asset_type').change( function() {
+		$.get($('#asset_type').val(), function(data) {
+			//$('#results').html(data[0]);
+			console.log(data[0]);
+		});
+	});
+});

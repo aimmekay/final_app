@@ -8,4 +8,14 @@
 <%= link_to 'Smart Phone', smartphones_path %><br>
 <%= link_to 'Desk Phone', deskphones_path %><br>
 <%= link_to 'Printer', printers_path %><br>
-<%= link_to 'Toner', toners_path %>
+<%= link_to 'Toner', toners_path %><br><br>
+
+<select id="asset_type" onSelect="getResults">
+<%= options_for_select([['Asset Type'], ['Desktop', 'desktops/all'], ['Laptop', 'laptops'], ['DTU', 'dtus'], ['Mobile Cart', 'mobilecarts'], ['Smart Phone', 'smartphones'], ['Desk Phone', 'deskphones'], ['Printer', 'printers'], ['Toner', 'toners']]) %>
+</select>
+<br><br>
+
+<div id="results">
+Hello
+</div>
+

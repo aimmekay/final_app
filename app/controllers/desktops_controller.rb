@@ -1,10 +1,15 @@
 class DesktopsController < ApplicationController
   before_action :set_desktop, only: [:show, :edit, :update, :destroy]
-
+  
+  def all
+    #render :json Desktop.all.to_json
+    @d = Desktops.all
+  end
   # GET /desktops
   # GET /desktops.json
   def index
     @desktops = Desktop.all
+    @desktop = Desktop.new
   end
 
   # GET /desktops/1

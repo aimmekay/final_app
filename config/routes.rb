@@ -12,10 +12,11 @@ Rails.application.routes.draw do
   resources :dtus
 
   resources :laptops
-
+  get 'desktops/all'
   resources :desktops
 
   root 'main#index'
+
   #get 'main/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
