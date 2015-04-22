@@ -15,24 +15,79 @@
 //= require turbolinks
 //= require_tree .
 
-var laptop_models = ["Asset Model", "Latitude E7240",
+var desktop_models = ["Desktop Model", "Optiplex 980", "Optiplex 960",
+					  "Optiplex 755", "Optiplex 745", "Optiplex GX560",
+					  "Optiplex 260"];
+
+var laptop_models = ["Laptop Model", "Latitude E7240",
                      "Latitude E6510", "Latitude E6420"];
 
-var printer_models = ["Asset Model", "Xerox",
-                     "Canon", "Brother", "HP", "Epson"];
+var dtu_models = ["DTU Model", "SunRay 270", "SunRay 2FS", "SunRay 2"];
+
+var mc_models = ["Mobile Cart Model", "Ergotron"];
+
+var sp_models = ["Smart Phone Model", "iPhone 6", "iPhone 6c", "iPhone 5", 
+				 "iPhone 5c", "Galaxy S6", "Galaxy S5", "Galaxy Note 4"];
+
+var dp_models = ["Desk Phone Model", "Avaya 9640"];
+
+var printer_models = ["Printer Model", "WorkCentre 7800", "WorkCentre 7775",
+                     "WorkCentre 7675", "WorkCentre 7665",
+                      "WorkCentre 7655", "WorkCentre 7556", 
+                      "WorkCentre 7545", "WorkCentre 7500"];
+
+var toner_models = ["Toner Model", "Xerox WorkCentre", "Xerox Phaser",
+					"Xerox ColorQube", "HP OfficeJet", "HP LaserJet", 
+					"HP Color LaserJet"];
 
 $(document).ready( function() {
 	$('#asset_type').change( function() {
+		if ($('#asset_type').val() == 'desktops') {
+			$('#dell_desktop_model').find('option').remove();
+			desktop_models.forEach(function(deskmodel) {
+				$('#dell_desktop_model').append('<option value="'+deskmodel+'">'+deskmodel+'</option>');
+			})
+		}
 		if ($('#asset_type').val() == 'laptops') {
 			$('#dell_desktop_model').find('option').remove();
 			laptop_models.forEach(function(lapmodel) {
 				$('#dell_desktop_model').append('<option value="'+lapmodel+'">'+lapmodel+'</option>');
 			})
 		}
+		if ($('#asset_type').val() == 'dtus') {
+			$('#dell_desktop_model').find('option').remove();
+			dtu_models.forEach(function(dtumodel) {
+				$('#dell_desktop_model').append('<option value="'+dtumodel+'">'+dtumodel+'</option>');
+			})
+		}
+		if ($('#asset_type').val() == 'mobilecarts') {
+			$('#dell_desktop_model').find('option').remove();
+			mc_models.forEach(function(mcmodel) {
+				$('#dell_desktop_model').append('<option value="'+mcmodel+'">'+mcmodel+'</option>');
+			})
+		}
+		if ($('#asset_type').val() == 'smartphones') {
+			$('#dell_desktop_model').find('option').remove();
+			sp_models.forEach(function(spmodel) {
+				$('#dell_desktop_model').append('<option value="'+spmodel+'">'+spmodel+'</option>');
+			})
+		}
+		if ($('#asset_type').val() == 'deskphones') {
+			$('#dell_desktop_model').find('option').remove();
+			dp_models.forEach(function(dpmodel) {
+				$('#dell_desktop_model').append('<option value="'+dpmodel+'">'+dpmodel+'</option>');
+			})
+		}
 		if ($('#asset_type').val() == 'printers') {
 			$('#dell_desktop_model').find('option').remove();
 			printer_models.forEach(function(printmodel) {
 				$('#dell_desktop_model').append('<option value="'+printmodel+'">'+printmodel+'</option>');
+			})
+		}
+		if ($('#asset_type').val() == 'toners') {
+			$('#dell_desktop_model').find('option').remove();
+			toner_models.forEach(function(tonermodel) {
+				$('#dell_desktop_model').append('<option value="'+tonermodel+'">'+tonermodel+'</option>');
 			})
 		}
 		$.get($('#asset_type').val(), function(data) {
