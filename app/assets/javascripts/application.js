@@ -40,6 +40,26 @@ var toner_models = ["Toner Model", "Xerox WorkCentre", "Xerox Phaser",
 					"Xerox ColorQube", "HP OfficeJet", "HP LaserJet", 
 					"HP Color LaserJet"];
 
+var desktop_search = ["Search By", "JSLG Tag", "Service Tag", "Serial Number",
+					  "Host Name", "Department", "Assignee Name", "Status"];
+
+var sp_search = ["Search By", "Carrier", "Phone Number", "MAC Address", "Serial Number",
+				 "MEID", "Department", "Assignee Name", "Status"];
+
+var dp_search = ["Search By", "Phone Number", "MAC Address", "Serial Number",
+			     "Department", "Assignee Name", "Status"];
+
+var dp_search = ["Search By", "Phone Number", "MAC Address", "Serial Number",
+			     "Department", "Assignee Name", "Status"];
+
+var print_search = ["Search By", "JSLG Tag", "MRC Tag", "Serial Number",
+					  "IP Address", "Host Name", "Department", "Status"];
+
+var toner_search = ["Search By", "Color", "ID", "Quantity"];
+//$(document).ready( function() {
+	//$('#dell_laptop_model').hide();
+	//});
+
 $(document).ready( function() {
 	$('#asset_type').change( function() {
 		if ($('#asset_type').val() == 'desktops') {
@@ -47,11 +67,21 @@ $(document).ready( function() {
 			desktop_models.forEach(function(deskmodel) {
 				$('#dell_desktop_model').append('<option value="'+deskmodel+'">'+deskmodel+'</option>');
 			})
+			$('#dell_laptop_model').find('option').remove();
+			desktop_search.forEach(function(desksearch) {
+				$('#dell_laptop_model').append('<option value="'+desksearch+'">'+desksearch+'</option>');
+			})
+			
+
 		}
 		if ($('#asset_type').val() == 'laptops') {
 			$('#dell_desktop_model').find('option').remove();
 			laptop_models.forEach(function(lapmodel) {
 				$('#dell_desktop_model').append('<option value="'+lapmodel+'">'+lapmodel+'</option>');
+			})
+			$('#dell_laptop_model').find('option').remove();
+			desktop_search.forEach(function(desksearch) {
+				$('#dell_laptop_model').append('<option value="'+desksearch+'">'+desksearch+'</option>');
 			})
 		}
 		if ($('#asset_type').val() == 'dtus') {
@@ -59,11 +89,19 @@ $(document).ready( function() {
 			dtu_models.forEach(function(dtumodel) {
 				$('#dell_desktop_model').append('<option value="'+dtumodel+'">'+dtumodel+'</option>');
 			})
+			$('#dell_laptop_model').find('option').remove();
+			desktop_search.forEach(function(desksearch) {
+				$('#dell_laptop_model').append('<option value="'+desksearch+'">'+desksearch+'</option>');
+			})
 		}
 		if ($('#asset_type').val() == 'mobilecarts') {
 			$('#dell_desktop_model').find('option').remove();
 			mc_models.forEach(function(mcmodel) {
 				$('#dell_desktop_model').append('<option value="'+mcmodel+'">'+mcmodel+'</option>');
+			})
+			$('#dell_laptop_model').find('option').remove();
+			desktop_search.forEach(function(desksearch) {
+				$('#dell_laptop_model').append('<option value="'+desksearch+'">'+desksearch+'</option>');
 			})
 		}
 		if ($('#asset_type').val() == 'smartphones') {
@@ -71,11 +109,19 @@ $(document).ready( function() {
 			sp_models.forEach(function(spmodel) {
 				$('#dell_desktop_model').append('<option value="'+spmodel+'">'+spmodel+'</option>');
 			})
+			$('#dell_laptop_model').find('option').remove();
+			sp_search.forEach(function(spsearch) {
+				$('#dell_laptop_model').append('<option value="'+spsearch+'">'+spsearch+'</option>');
+			})
 		}
 		if ($('#asset_type').val() == 'deskphones') {
 			$('#dell_desktop_model').find('option').remove();
 			dp_models.forEach(function(dpmodel) {
 				$('#dell_desktop_model').append('<option value="'+dpmodel+'">'+dpmodel+'</option>');
+			})
+			$('#dell_laptop_model').find('option').remove();
+			dp_search.forEach(function(dpsearch) {
+				$('#dell_laptop_model').append('<option value="'+dpsearch+'">'+dpsearch+'</option>');
 			})
 		}
 		if ($('#asset_type').val() == 'printers') {
@@ -83,11 +129,19 @@ $(document).ready( function() {
 			printer_models.forEach(function(printmodel) {
 				$('#dell_desktop_model').append('<option value="'+printmodel+'">'+printmodel+'</option>');
 			})
+			$('#dell_laptop_model').find('option').remove();
+			print_search.forEach(function(printsearch) {
+				$('#dell_laptop_model').append('<option value="'+printsearch+'">'+printsearch+'</option>');
+			})
 		}
 		if ($('#asset_type').val() == 'toners') {
 			$('#dell_desktop_model').find('option').remove();
 			toner_models.forEach(function(tonermodel) {
 				$('#dell_desktop_model').append('<option value="'+tonermodel+'">'+tonermodel+'</option>');
+			})
+			$('#dell_laptop_model').find('option').remove();
+			toner_search.forEach(function(tonersearch) {
+				$('#dell_laptop_model').append('<option value="'+tonersearch+'">'+tonersearch+'</option>');
 			})
 		}
 		$.get($('#asset_type').val(), function(data) {
@@ -95,11 +149,13 @@ $(document).ready( function() {
 
 		});
 	});
+
+	//$('#dell_desktop_model').change( function () {
+		//if ($('#dell_desktop_model').val() == '')
+	//});	
 });
 
 
 
-$(document).ready( function() {
-	$('#dell_laptop_model').hide();
-	});
+
 
